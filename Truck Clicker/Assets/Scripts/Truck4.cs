@@ -12,7 +12,7 @@ public class Truck4 : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update this is big balls science bitch!
     void Start()
     {
         
