@@ -27,4 +27,6 @@ public class Truck1 : MonoBehaviour
             Controller.Money = Controller.Money + 1;
         }
     }
+
+
 }
