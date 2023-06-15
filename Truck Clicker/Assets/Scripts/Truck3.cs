@@ -4,19 +4,13 @@ using UnityEngine;
 
 public class Truck3 : MonoBehaviour
 {
-    void OnMouseDown()
-    {
-        if (Controller.Trucks >= 2)
-        {
-            transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
-        }
-    }
-
-
+    private static int Running;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        Running = 0;
     }
 
     // Update is called once per frame
@@ -25,17 +19,28 @@ public class Truck3 : MonoBehaviour
         
     }
 
+    void OnMouseDown()
+    {
+        if (Controller.Trucks >= 2) {
+            if (Running == 0) {
+                Running = 1;
+                Controller.Money = Controller.Money - 1;
+            } else {
+                transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
+            }
+        }
+    }
+
     void FixedUpdate()
      {
-        if (Controller.Trucks >= 2)
+        if (Controller.Trucks >= 2 && Running == 1)
         {
-            if (transform.position.y <= 120)
-            {
+            if (transform.position.y <= 120){
                transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-            } else 
-            {
+            } else {
                 transform.position = new Vector3(transform.position.x, -110, transform.position.z);
-                Controller.Money = Controller.Money + 1;
+                Controller.Money = Controller.Money + 2;
+                Running = 0;
             }
         }
     }

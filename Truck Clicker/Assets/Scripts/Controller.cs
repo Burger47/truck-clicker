@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
 {
-    public static int Money;
-    public static int Trucks;
-    public Text MoneyText;
     public static int Cost;
+    public static float Money;
+    public static int Trucks;
+
+    public Text MoneyText;
+    public Text ButtonText;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        Money = 0;
+        Money = 10;
         Trucks = 0;
         Cost = 10;
     }
@@ -22,12 +25,12 @@ public class Controller : MonoBehaviour
     void Update()
     {
         MoneyText.text = Money.ToString();
+        ButtonText.text = "Purchase Truck Cost: "+Cost.ToString();
     }
 
     public void OnButtonPress()
     {
-        if (Controller.Money >= Cost)
-        {
+        if (Controller.Money >= Cost) {
             Controller.Money = Controller.Money - Cost;
             Cost = Cost * 2;
             Controller.Trucks += 1;
