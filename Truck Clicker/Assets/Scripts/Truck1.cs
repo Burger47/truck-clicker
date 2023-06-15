@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Truck1 : MonoBehaviour
+
 {
     private static int Running;
+
     
 
     // Start is called before the first frame update
@@ -16,7 +18,7 @@ public class Truck1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnMouseDown()
