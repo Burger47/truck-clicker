@@ -61,6 +61,7 @@ public class Controller : MonoBehaviour
             Controller.Money = Controller.Money - TruckCost;
             TruckCost = TruckCost * 2;
             Controller.Trucks += 1;
+            
         }
     }
 
@@ -70,6 +71,7 @@ public class Controller : MonoBehaviour
         {
             Controller.Money = Controller.Money - T1ManagerCost;
             T1Manager += 1;
+           
         }
     }
 
