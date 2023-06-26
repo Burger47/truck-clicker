@@ -7,20 +7,28 @@ public class Truck1 : MonoBehaviour
 
 {
     private static int Running;
-    public Text LaunchText;
 
-    
+    private static int Speed;
+    private static int SpeedCost;
+    public Text SpeedText1;
+
+    public Text LaunchText;
 
     // Start is called before the first frame update
     void Start()
     {
         Running = 0;
         LaunchText.text = "Click Truck To Launch";
+
+        Speed = 1;
+        SpeedCost = 75;
     }
 
     // Update is called once per frame
     void Update()
     {
+        SpeedText1.text = "Upgrade Truck Speed 1 Cost: " + SpeedCost.ToString() + "   Speed: " + Speed.ToString();
+
         if (transform.position.y == -110 && Controller.T1Manager == 0){
             LaunchText.text = "Click Truck To Launch";
         } else if (Controller.T1Manager == 1) {
@@ -46,7 +54,7 @@ public class Truck1 : MonoBehaviour
      {
         if (Running == 1 || Controller.T1Manager == 1){
             if (transform.position.y <= 120){
-                transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+                transform.position = new Vector3(transform.position.x, transform.position.y + 1*Speed, transform.position.z);
             } else {
                 transform.position = new Vector3(transform.position.x, -110, transform.position.z);
                 Controller.Money = Controller.Money + 2;
@@ -55,6 +63,15 @@ public class Truck1 : MonoBehaviour
                     Controller.Money -= 1;
                 }
             }
+        }
+    }
+
+    public void SpeedButton1()
+    {
+        if (Controller.Money >= SpeedCost){
+            Controller.Money -= SpeedCost;
+            Speed += 1;
+            SpeedCost = SpeedCost + (5*Speed);
         }
     }
 }

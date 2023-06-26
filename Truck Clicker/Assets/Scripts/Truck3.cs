@@ -1,22 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Truck3 : MonoBehaviour
 {
     private static int Running;
+
+    private static int Speed;
+    private static int SpeedCost;
+    public Text SpeedText3;
     
     
     // Start is called before the first frame update
     void Start()
     {
         Running = 0;
+
+        Speed = 1;
+        SpeedCost = 160;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        SpeedText3.text = "Upgrade Truck Speed 3 Cost: " + SpeedCost.ToString() + "   Speed: " + Speed.ToString();
     }
 
     void OnMouseDown()
@@ -38,7 +46,7 @@ public class Truck3 : MonoBehaviour
         if (Controller.Trucks >= 2){
             if (Running == 1 || Controller.T3Manager == 1){
                 if (transform.position.y <= 120){
-                    transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+                    transform.position = new Vector3(transform.position.x, transform.position.y + 1*Speed, transform.position.z);
                 } else {
                     transform.position = new Vector3(transform.position.x, -110, transform.position.z);
                     Controller.Money = Controller.Money + 2;
@@ -48,6 +56,15 @@ public class Truck3 : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    public void SpeedButton3()
+    {
+        if (Controller.Money >= SpeedCost){
+            Controller.Money -= SpeedCost;
+            Speed += 1;
+            SpeedCost = SpeedCost + (5*Speed);
         }
     }
 }

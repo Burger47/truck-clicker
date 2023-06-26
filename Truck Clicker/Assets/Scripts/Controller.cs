@@ -73,7 +73,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-     public void ManagerButton2()
+    public void ManagerButton2()
     {
         if (Controller.Money >= T2ManagerCost && T2Manager != 1)
         {
@@ -82,7 +82,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-     public void ManagerButton3()
+    public void ManagerButton3()
     {
         if (Controller.Money >= T3ManagerCost && T3Manager != 1)
         {
@@ -91,7 +91,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-     public void ManagerButton4()
+    public void ManagerButton4()
     {
         if (Controller.Money >= T4ManagerCost && T4Manager != 1)
         {
