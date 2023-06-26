@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 566832325}
   - component: {fileID: 566832324}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Moneytext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -376,7 +376,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 416.137, y: 212.207}
+  m_AnchoredPosition: {x: 410, y: 205}
   m_SizeDelta: {x: 259.727, y: 85.585}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566832324
@@ -601,8 +601,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 416.14, y: 110.9312}
-  m_SizeDelta: {x: 259.73, y: 116.9575}
+  m_AnchoredPosition: {x: 407.67, y: 103.723}
+  m_SizeDelta: {x: 264.396, y: 116.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949534170
 MonoBehaviour:
@@ -962,6 +962,7 @@ RectTransform:
   - {fileID: 2035474395}
   - {fileID: 1908262501}
   - {fileID: 1377396219}
+  - {fileID: 1914850210}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1041,7 +1042,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Purchase Manager Cost: 90'
+  m_Text: 'Purchase Manager 3 Cost: 90'
 --- !u!222 &1130518852
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1121,7 +1122,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Purchase Manager Cost: 15'
+  m_Text: 'Purchase Manager 1 Cost: 15'
 --- !u!222 &1157630496
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1251,8 +1252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.94, y: -215}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: 473.863, y: -46.903015}
+  m_SizeDelta: {x: 132, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377396220
 MonoBehaviour:
@@ -1419,7 +1420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Purchase Manager Cost: 40'
+  m_Text: 'Purchase Manager 2 Cost: 40'
 --- !u!222 &1411445538
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1608,8 +1609,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -479, y: -215}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: 341.863, y: 14.170995}
+  m_SizeDelta: {x: 132, y: 62.148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1546664461
 MonoBehaviour:
@@ -1810,8 +1811,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -236.46, y: -215}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: 341.863, y: -46.903015}
+  m_SizeDelta: {x: 132, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1908262502
 MonoBehaviour:
@@ -1906,6 +1907,86 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908262500}
+  m_CullTransparentMesh: 1
+--- !u!1 &1914850209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914850210}
+  - component: {fileID: 1914850212}
+  - component: {fileID: 1914850211}
+  m_Layer: 5
+  m_Name: Launchtext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1914850210
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914850209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1050877071}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -476.87375, y: -210.33354}
+  m_SizeDelta: {x: 111.2481, y: 62.8671}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1914850211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914850209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 17
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 87
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Click To Send
+--- !u!222 &1914850212
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914850209}
   m_CullTransparentMesh: 1
 --- !u!1 &1945710704
 GameObject:
@@ -2171,8 +2252,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -354.03, y: -215}
-  m_SizeDelta: {x: 65, y: 60}
+  m_AnchoredPosition: {x: 473.863, y: 14.170999}
+  m_SizeDelta: {x: 132, y: 62.148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035474396
 MonoBehaviour:
@@ -2431,7 +2512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105421850}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -443.8, y: -110.8, z: 0}
+  m_LocalPosition: {x: -443.8, y: -110, z: 0}
   m_LocalScale: {x: 50, y: 41, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2450,6 +2531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8164636089e0b0468a37057632e2c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LaunchText: {fileID: 1914850211}
 --- !u!61 &2105421854
 BoxCollider2D:
   m_ObjectHideFlags: 0

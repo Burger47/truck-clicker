@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Truck1 : MonoBehaviour
 
 {
     private static int Running;
+    public Text LaunchText;
 
     
 
@@ -13,12 +15,19 @@ public class Truck1 : MonoBehaviour
     void Start()
     {
         Running = 0;
+        LaunchText.text = "Click Truck To Launch";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (transform.position.y == -110 && Controller.T1Manager == 0){
+            LaunchText.text = "Click Truck To Launch";
+        } else if (Controller.T1Manager == 1) {
+            LaunchText.text = "";
+        } else {
+           LaunchText.text = "";
+        }
     }
 
     void OnMouseDown()
