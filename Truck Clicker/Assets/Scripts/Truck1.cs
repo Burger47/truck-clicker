@@ -8,6 +8,8 @@ public class Truck1 : MonoBehaviour
 {
     private static int Running;
 
+    private static int Ltext;
+
     private static int Speed;
     private static int SpeedCost;
     public Text SpeedText1;
@@ -20,6 +22,8 @@ public class Truck1 : MonoBehaviour
         Running = 0;
         LaunchText.text = "Click Truck To Launch";
 
+        Ltext = 1;
+
         Speed = 1;
         SpeedCost = 75;
     }
@@ -28,14 +32,17 @@ public class Truck1 : MonoBehaviour
     void Update()
     {
         SpeedText1.text = "Upgrade Truck Speed 1 Cost: " + SpeedCost.ToString() + "   Speed: " + Speed.ToString();
-
+        
         if (transform.position.y == -110 && Controller.T1Manager == 0){
-            LaunchText.text = "Click Truck To Launch";
+            if (Ltext == 1){
+                LaunchText.text = "Click Truck To Launch";
+            }
         } else if (Controller.T1Manager == 1) {
             LaunchText.text = "";
         } else {
-           LaunchText.text = "";
+        LaunchText.text = "";
         }
+        
     }
 
     void OnMouseDown()
@@ -48,6 +55,7 @@ public class Truck1 : MonoBehaviour
         } else {
         transform.position = new Vector3(transform.position.x, transform.position.y + 10, transform.position.z);
         }
+        Ltext = 0;
     }
 
     void FixedUpdate()

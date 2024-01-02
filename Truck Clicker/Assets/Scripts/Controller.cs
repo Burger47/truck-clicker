@@ -10,15 +10,19 @@ public class Controller : MonoBehaviour
 
     public static int T1Manager;
     public static int T1ManagerCost;
+    public GameObject T1MButton;
 
     public static int T2Manager;
     public static int T2ManagerCost;
+    public GameObject T2MButton;
 
     public static int T3Manager;
     public static int T3ManagerCost;
+    public GameObject T3MButton;
 
     public static int T4Manager;
     public static int T4ManagerCost;
+    public GameObject T4MButton;
 
     public static int TruckCost;
     public static int Trucks;
@@ -71,6 +75,7 @@ public class Controller : MonoBehaviour
         {
             Controller.Money = Controller.Money - T1ManagerCost;
             T1Manager += 1;
+            T1MButton.SetActive(false);
            
         }
     }
@@ -81,6 +86,7 @@ public class Controller : MonoBehaviour
         {
             Controller.Money = Controller.Money - T2ManagerCost;
             T2Manager += 1;
+            T2MButton.SetActive(false);
         }
     }
 
@@ -90,6 +96,7 @@ public class Controller : MonoBehaviour
         {
             Controller.Money = Controller.Money - T3ManagerCost;
             T3Manager += 1;
+            T3MButton.SetActive(false);
         }
     }
 
@@ -99,6 +106,7 @@ public class Controller : MonoBehaviour
         {
             Controller.Money = Controller.Money - T4ManagerCost;
             T4Manager += 1;
+            T4MButton.SetActive(false);
         }
     }
 }
