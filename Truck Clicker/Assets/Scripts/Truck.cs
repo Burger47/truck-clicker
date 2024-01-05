@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Truck1 : MonoBehaviour
+public class Truck : MonoBehaviour
 
 {
-    public static int Running;
-    public static int Speed;
+
+    public int Running;
+    public int Speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        Running = 0;
-
-        Speed = 1;
+        
     }
 
     void OnMouseDown()

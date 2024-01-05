@@ -8,7 +8,9 @@ public class Controller : MonoBehaviour
     
     public static float Money;
 
-    public Text LaunchText;
+    public GameObject TruckOriginal;
+
+    public GameObject TruckContainer;
 
     public static int SpeedCost1;
     public Text SpeedText1;
@@ -41,10 +43,8 @@ public class Controller : MonoBehaviour
     {
         Money = 10000;
 
-        LaunchText.text = "Click Truck To Launch";
-
         SpeedCost1 = 75;
-        SpeedText1.text = "Upgrade Truck Speed 1 Cost: " + SpeedCost1.ToString() + "   Speed: " + Truck1.Speed.ToString();
+        //SpeedText1.text = "Upgrade Truck Speed 1 Cost: " + SpeedCost1.ToString() + "   Speed: " + Truck.Speed.ToString();
 
         T1Manager = 0;
         T1ManagerCost = 15;
@@ -60,43 +60,52 @@ public class Controller : MonoBehaviour
 
         Trucks = 0;
         TruckCost = 10;
+
+        GameObject Temp = Instantiate(TruckOriginal);
+        Temp.transform.parent = TruckContainer.transform;
+        Temp.GetComponent<Truck>().Speed = 1;
+        Temp.GetComponent<Truck>().Running = 0;
+        Temp.name = "Truck" + (Trucks+1);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Truck1.Running == 1){
-            LaunchText.enabled = false;
-        }
         MoneyText.text = Money.ToString();
         ButtonText.text = "Purchase Truck Cost: "+TruckCost.ToString();
     }
 
     public void OnTruckButtonPress()
     {
-        if (Controller.Money >= TruckCost) {
-            Controller.Money = Controller.Money - TruckCost;
+        if (Money >= TruckCost) {
+            Money = Money - TruckCost;
             TruckCost = TruckCost * 2;
-            Controller.Trucks += 1;
-            
+            Trucks += 1;
+
+            GameObject Temp = Instantiate(TruckOriginal, new Vector3(TruckOriginal.transform.position.x + Trucks * 115, TruckOriginal.transform.position.y, TruckOriginal.transform.position.z), TruckOriginal.transform.rotation);
+            Temp.transform.parent = TruckContainer.transform;
+            Temp.GetComponent<Truck>().Speed = 1;
+            Temp.GetComponent<Truck>().Running = 0;
+            Temp.name = "Truck" + (Trucks+1);
         }
     }
 
     public void SpeedButton1()
     {
         if (Money >= SpeedCost1){
-            Controller.Money -= SpeedCost1;
-            Truck1.Speed += 1;
-            SpeedCost1 = SpeedCost1 + (5*Truck1.Speed);
-            SpeedText1.text = "Upgrade Truck Speed 1 Cost: " + SpeedCost1.ToString() + "   Speed: " + Truck1.Speed.ToString();;
+            Money -= SpeedCost1;
+            //Truck.Speed += 1;
+           //SpeedCost1 = SpeedCost1 + (5*Truck.Speed);
+            //SpeedText1.text = "Upgrade Truck Speed 1 Cost: " + SpeedCost1.ToString() + "   Speed: " + Truck.Speed.ToString();;
         }
     }
 
     public void ManagerButton1()
     {
-        if (Controller.Money >= T1ManagerCost && T1Manager != 1)
+        if (Money >= T1ManagerCost && T1Manager != 1)
         {
-            Controller.Money = Controller.Money - T1ManagerCost;
+            Money = Money - T1ManagerCost;
             T1Manager += 1;
             T1MButton.SetActive(false);
            
@@ -105,9 +114,9 @@ public class Controller : MonoBehaviour
 
     public void ManagerButton2()
     {
-        if (Controller.Money >= T2ManagerCost && T2Manager != 1)
+        if (Money >= T2ManagerCost && T2Manager != 1)
         {
-            Controller.Money = Controller.Money - T2ManagerCost;
+            Money = Money - T2ManagerCost;
             T2Manager += 1;
             T2MButton.SetActive(false);
         }
@@ -115,9 +124,9 @@ public class Controller : MonoBehaviour
 
     public void ManagerButton3()
     {
-        if (Controller.Money >= T3ManagerCost && T3Manager != 1)
+        if (Money >= T3ManagerCost && T3Manager != 1)
         {
-            Controller.Money = Controller.Money - T3ManagerCost;
+            Money = Money - T3ManagerCost;
             T3Manager += 1;
             T3MButton.SetActive(false);
         }
@@ -125,9 +134,9 @@ public class Controller : MonoBehaviour
 
     public void ManagerButton4()
     {
-        if (Controller.Money >= T4ManagerCost && T4Manager != 1)
+        if (Money >= T4ManagerCost && T4Manager != 1)
         {
-            Controller.Money = Controller.Money - T4ManagerCost;
+            Money = Money - T4ManagerCost;
             T4Manager += 1;
             T4MButton.SetActive(false);
         }
